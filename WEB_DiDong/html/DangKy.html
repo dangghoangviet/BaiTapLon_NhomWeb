@@ -10,57 +10,56 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap">
-    
-    <script src="../css/bootstrap.bundle.min.js"></script>
-
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-latest.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navbar-light blue">
-        <div class="container-fluid">
-            <a class="navbar-brand thea" href="#"><img src="../images/Untitled-2.png" alt="Logo" class="w-100"></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container-sm-fluid color-blue">
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-light blue">
 
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav w-100">
-                    <li class="nav-item dropdown me-5 w-100">
-                        <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
-                            điểm</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">TP.HCM</a></li>
-                            <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
-                            <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                    <a class="navbar-brand thea" href="#"><img src="../images/Logo.png" alt="Logo" class="w-100 ms-3"></a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav w-100">
+                            <li class="nav-item dropdown me-5 w-100">
+                                <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
+                                    điểm</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                                    <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                                    <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                                </ul>
+                            </li>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
+                                <button class="btn btn-outline-primary" type="button" id="search-button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                            
+                            <li class="nav-item w-100">
+                                <a class="nav-link w-50" href="#">
+                                    <i class="fa fa-user btn" aria-hidden="true"></i>
+                                    Tài khoản
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a class="nav-link w-50" href="#">
+                                    <i class="fa fa-shopping-cart btn "></i>
+                                    Giỏ Hàng
+                                </a>
+                            </li>
                         </ul>
-                    </li>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
-                        <button class="btn btn-outline-primary" type="button" id="search-button">
-                            <i class="fa fa-search"></i>
-                        </button>
+        
                     </div>
-                    
-                    <li class="nav-item w-100">
-                        <a class="nav-link w-50" href="#">
-                            <i class="fa fa-user btn" aria-hidden="true"></i>
-                            Tài khoản
-                        </a>
-                    </li>
-                    <li class="nav-item w-100">
-                        <a class="nav-link w-50" href="#">
-                            <i class="fa fa-shopping-cart btn "></i>
-                            Giỏ Hàng
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-    </nav>
-    <div class="container-fluid color-blue">
+            </nav>
+        </header>
         <section class="container text-center bg-light shadow">
             <h1>Chào mừng bạn đến với DiDong.vn</h1>
             <h3 class="text-danger">Đăng ký tài khoản</h3>
@@ -70,10 +69,9 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control border-0 border-bottom " id="inputField1"
-                                    placeholder=" " required pattern="[A-Za-z\s]+$"
-                                    title="Vui lòng nhập đúng họ và tên (chỉ chấp nhận chữ cái và dấu cách)">
-                                <label for="inputField1" id="inputLabel1">Nhập họ và tên</label>
+                                <input type="text" class="form-control border-0 border-bottom " id="inputHoTen"
+                                    placeholder=" " required >
+                                <label for="inputHoTen" id="inputLabel1">Nhập họ và tên</label>
                             </div>
                         </div>
                     </div>
@@ -81,10 +79,9 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control border-0 border-bottom " id="inputField2"
-                                    placeholder=" " required pattern="[0-9]+"
-                                    title="Vui lòng nhập đúng số điện thoại (chỉ chấp nhận số từ 0-9)">
-                                <label for="inputField2" id="inputLabel2">Nhập số điện thoại</label>
+                                <input type="text" class="form-control border-0 border-bottom " id="inputSDT"
+                                    placeholder=" " required >
+                                <label for="inputSDT" id="inputLabel2">Nhập số điện thoại</label>
                             </div>
                         </div>
                     </div>
@@ -92,9 +89,9 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control border-0 border-bottom " id="inputField3"
-                                    placeholder=" " required>
-                                <label for="inputField3" id="inputLabel3">Nhập email (Không bắt buộc)</label>
+                                <input type="text" class="form-control border-0 border-bottom " id="inputEmail"
+                                    placeholder=" " >
+                                <label for="inputEmail" id="inputLabel3">Nhập email (Không bắt buộc)</label>
                                 <small class="form-text text-muted ms-3">Hóa đơn VAT khi mua hàng sẽ được gửi qua mail
                                     này</small>
                             </div>
@@ -104,21 +101,21 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control border-0 border-bottom " id="inputField4"
-                                    placeholder=" " required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$">
-                                <label for="inputField4" id="inputLabel4">Nhập mật khẩu</label>
+                                <input type="password" class="form-control border-0 border-bottom " id="inputMatKhau"
+                                    placeholder=" " required >
+                                <label for="inputMatKhau" id="inputLabel4">Nhập mật khẩu</label>
                                 <small class="form-text text-muted ms-3">(*)Mật khẩu tối thiểu 6 ký tự, có ít nhất 1 chữ
                                     và 1 số.(VD: 12345a)</small>
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center text-start">
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control border-0 border-bottom " id="inputField5"
+                                <input type="password" class="form-control border-0 border-bottom " id="inputMatKhau2"
                                     placeholder=" " required>
-                                <label for="inputField5" id="inputLabel5">Nhập lại mật khẩu</label>
+                                <label for="inputMatKhau2" id="inputLabel5">Nhập lại mật khẩu</label>
                                 <small class="form-text text-muted ms-3">(*)Nhập lại mật khẩu phải giống với mật khẩu
                                     trên.</small>
                             </div>
@@ -127,19 +124,19 @@
 
                     <div class="row justify-content-center">
                         <div class="col-6 text-start">
-                            <label class="form-check-label ms-3 text-muted"><input type="checkbox" class="me-3">Đăng ký
+                            <label class="form-check-label ms-3 text-muted"><input type="checkbox" class="me-3" id="cbxBanTin">Đăng ký
                                 nhận bản tin khuyến mãi từ DiDong.vn</label>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-6 text-start">
-                            <label class="form-check-label ms-3 text-muted"><input type="checkbox" class="me-3">Tôi đồng
+                            <label class="form-check-label ms-3 text-muted"><input type="checkbox" class="me-3" id="cbxDongY">Tôi đồng
                                 ý với các điều khoảng bảo mật cá nhân</label>
                         </div>
                     </div>
                     <div class="row justify-content-center mt-3">
                         <div class="col-6">
-                            <button type="submit" class="btn btn-danger w-100 pt-3 pb-3">Đăng ký</button>
+                            <button type="submit" class="btn btn-danger w-100 pt-3 pb-3" id="btnDangKy"  disabled>Đăng ký</button>
                         </div>
                     </div>
                 </form>
@@ -176,7 +173,7 @@
                 </div>
             </div>
         </section>
-       
+
     </div>
     <footer class="justify-content-center d-flex blue ">
         <div class="container">
@@ -206,10 +203,10 @@
                     <td></td>
                     <td><a href="#"><img src="../images/youtu.png" alt="" class="login-google me-2">Youtube</a></td>
                 </tr>
-           </table>
+            </table>
         </div>
-     </footer>
-    <script src="../css/Dangky_DangNhap.js"></script>
+    </footer>
+    <script src="../js/dangKy.js"></script>
 </body>
 
 </html>

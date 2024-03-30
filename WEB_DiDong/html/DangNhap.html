@@ -10,55 +10,56 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap">
-    <script src="../css/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-latest.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navbar-light blue">
-        <div class="container-fluid">
-            <a class="navbar-brand thea" href="#"><img src="../images/Untitled-2.png" alt="Logo" class="w-100"></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container-sm-fluid color-blue">
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-light blue">
 
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav w-100">
-                    <li class="nav-item dropdown me-5 w-100">
-                        <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
-                            điểm</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">TP.HCM</a></li>
-                            <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
-                            <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                    <a class="navbar-brand thea" href="#"><img src="../images/Logo.png" alt="Logo" class="w-100 ms-3"></a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav w-100">
+                            <li class="nav-item dropdown me-5 w-100">
+                                <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
+                                    điểm</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                                    <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                                    <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                                </ul>
+                            </li>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
+                                <button class="btn btn-outline-primary" type="button" id="search-button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                            
+                            <li class="nav-item w-100">
+                                <a class="nav-link w-50" href="#">
+                                    <i class="fa fa-user btn" aria-hidden="true"></i>
+                                    Tài khoản
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a class="nav-link w-50" href="#">
+                                    <i class="fa fa-shopping-cart btn "></i>
+                                    Giỏ Hàng
+                                </a>
+                            </li>
                         </ul>
-                    </li>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
-                        <button class="btn btn-outline-primary" type="button" id="search-button">
-                            <i class="fa fa-search"></i>
-                        </button>
+        
                     </div>
-                    
-                    <li class="nav-item w-100">
-                        <a class="nav-link w-50" href="#">
-                            <i class="fa fa-user btn" aria-hidden="true"></i>
-                            Tài khoản
-                        </a>
-                    </li>
-                    <li class="nav-item w-100">
-                        <a class="nav-link w-50" href="#">
-                            <i class="fa fa-shopping-cart btn "></i>
-                            Giỏ Hàng
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-    </nav>
-    <div class="container-fluid color-blue">
+            </nav>
+        </header>
         <section class="container text-center bg-light shadow">
             <h1>Chào mừng bạn đến với DiDong.vn</h1>
             <h3 class="text-danger">Đăng nhập tài khoản</h3>
@@ -68,8 +69,8 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="inputField" placeholder=" " required>
-                                <label for="inputField" id="inputLabel">Nhập số điện thoại/email</label>
+                                <input type="text" class="form-control" id="inputSDT_DN" placeholder=" " required>
+                                <label for="inputSDT" id="inputLabel">Nhập số điện thoại</label>
                             </div>
                         </div>
                     </div>
@@ -77,8 +78,8 @@
                         <div class="col-md-6">
                             <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="inputField" placeholder=" " required>
-                                <label for="inputField" id="inputLabel">Nhập mật khẩu</label>
+                                <input type="password" class="form-control" id="inputMatKhau_DN" placeholder=" " required>
+                                <label for="inputMatKhau_DN" id="inputLabel">Nhập mật khẩu</label>
                             </div>
                         </div>
                     </div>
@@ -89,7 +90,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-6">
-                            <button type="submit" class="btn btn-danger w-100 pt-3 pb-3">Đăng nhập</button>
+                            <button type="submit" class="btn btn-danger w-100 pt-3 pb-3" id="btnDangNhap">Đăng nhập</button>
                         </div>
                     </div>
                 </form>
@@ -157,6 +158,7 @@
            </table>
         </div>
      </footer>
+     <script src="../js/dangNhap.js"></script>
 </body>
 
 </html>

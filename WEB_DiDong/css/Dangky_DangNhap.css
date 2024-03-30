@@ -10,10 +10,10 @@
     color: black;
 }
 .color-blue{
-    background: linear-gradient(180deg,  rgb(211, 235, 250),rgb(255, 255, 255));
+    background: linear-gradient(180deg,  rgb(198, 224, 255),rgb(255, 255, 255));
 }
 .blue{
-    background-color: rgb(211, 235, 250);
+    background-color: rgb(198, 224, 255)
 }
 .thea{
     width: 10%;
